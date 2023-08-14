@@ -244,6 +244,110 @@ a:focus {
   top: 0;
 }
 
+
+.user-pic{
+  width: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-left: 30px;
+}
+
+.nav_profile{
+  width: 100%;
+  text-align: right;
+}
+
+.nav_profile li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
+
+.nav_profile li a {
+   color: #000;
+}
+
+.sub-menu-wrap{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+}
+
+.sub-menu-wrap{
+  position: absolute;
+  top: 100%;
+  right: 10%;
+  width: 320px;
+  max-height: 0px ; 
+  overflow: hidden;
+}
+
+.sub-menu {
+  background-color: white;
+  padding: 20px;
+  margin: 10px;
+}
+
+.sub-menu-wrap.open-menu{
+  max-height: 400px;
+}
+
+.user-info{
+  display: flex;
+  align-items: center;
+}
+
+.user-info h2{
+  font-weight: 500;
+}
+
+.user-info img{
+  width: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.sub-menu hr {
+  border: 0;
+  height: 1px;
+  width: 100%;
+  background-color: #ccc;
+  margin: 15px 0 10px;
+}
+
+.sub-menu-link{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  margin: 12px 0;
+}
+
+.sub-menu-link p{
+  width: 100%;
+}
+
+.sub-menu-link img{
+  width: 40px;
+  background-color: #e5e5e5;
+  border-radius: 50%;
+  padding: 8px;
+  margin-right: 15px;
+}
+
+.sub-menu-link span{
+  font-size: 22px;
+  transition: transform 0.5s;
+}
+
+.sub-menu-link:hover span{
+  transform: translate(5px);
+}
+
+.sub-menu-link:hover p{
+  font-weight: 600;
+}
+
+
 /*end header section*/
 /* slider section */
 .slider_section {
@@ -918,6 +1022,33 @@ a:focus {
 
 .footer_section .footer-info p a {
   color: inherit;
+}
+
+.notificacion {
+  display: none;
+  position: fixed;
+  top: 90px;
+  right: 10px;
+  padding: 10px;
+  background-color: #4caf50;
+  color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.notificacion.success {
+  background-color: #28a745;
+}
+
+.cerrar {
+  float: right;
+  cursor: pointer;
+}
+
+/* Estilos para animar la aparición de la notificación */
+.notificacion.mostrar {
+  display: block;
+  animation: aparecer 0.14s ease;
 }
 /*# sourceMappingURL=style.css.map */
 

@@ -18,7 +18,8 @@
     <!-- style generic -->
    <link href="css/style.css" rel="stylesheet"/>
    <!-- font awesome style -->
-   <link href="css/font-awesome.min.css" rel="stylesheet" />
+   <!-- <link href="css/font-awesome.min.css" rel="stylesheet" /> -->
+   <script src="https://kit.fontawesome.com/a2dd6045c4.js" crossorigin="anonymous"></script>
    <!-- responsive style -->
    <link href="css/responsive.css" rel="stylesheet" />
 </head>
@@ -117,11 +118,28 @@
                            </svg>
                         </a>
                      </li>
-                     <form class="form-inline">
+                     <img src="images/profile/profile.jpg" class="user-pic" onclick="toggleMenu()">
+                     <div class="sub-menu-wrap" id="subMenu">
+                        <div class="sub-menu">
+                           <div class="user-info">
+                              <img src="images/profile/profile.jpg">
+                              <h2>Brayan Garcia</h2>
+                           </div>
+                           <hr>
+
+                           <a href="#" class="sub-menu-link">
+                              <img src="images/iconos/profile.png">
+                              <p>Login</p>
+                              <span>></span>
+                           </a>
+
+                        </div>
+                     </div>
+                     <!-- <form class="form-inline">
                         <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
-                           <i class="fa fa-search" aria-hidden="true"></i>
+                           <i class="fa-regular fa-user"></i>
                         </button>
-                     </form>
+                     </form> -->
                   </ul>
                </div>
             </nav>
@@ -864,7 +882,7 @@
       <div class="container">
          <div class="heading_container heading_center">
             <h2>
-               Customer's Testimonial
+              Comentarios de la comunidad 
             </h2>
          </div>
          <div id="carouselExample3Controls" class="carousel slide" data-ride="carousel">
@@ -963,12 +981,12 @@
             <div class="col-md-4">
                <div class="full">
                   <div class="logo_footer">
-                     <a href="#"><img width="210" src="images/logo.PNG" alt="#" /></a>
+                     <a href="#"><img width="210" src="images/Slider/logo.PNG" alt="#" /></a>
                   </div>
                   <div class="information_f">
-                     <p><strong>ADDRESS:</strong> 28 White tower, Street Name New York City, USA</p>
-                     <p><strong>TELEPHONE:</strong> +91 987 654 3210</p>
-                     <p><strong>EMAIL:</strong> yourmain@gmail.com</p>
+                     <p><strong>Dirección:</strong>direccion del cliente</p>
+                     <p><strong>TELEFONO:</strong>93938121123</p>
+                     <p><strong>EMAIL:</strong>yourmain@gmail.com</p>
                   </div>
                </div>
             </div>
@@ -981,24 +999,24 @@
                               <h3>Menu</h3>
                               <ul>
                                  <li><a href="#">Home</a></li>
-                                 <li><a href="#">About</a></li>
-                                 <li><a href="#">Services</a></li>
-                                 <li><a href="#">Testimonial</a></li>
-                                 <li><a href="#">Blog</a></li>
-                                 <li><a href="#">Contact</a></li>
+                                 <li><a href="#">Sobre nosotros</a></li>
+                                 <li><a href="#">Servicios</a></li>
+                                 <li><a href="#">Comentarios</a></li>
+                                 <li><a href="#">Agenda</a></li>
+                                 <li><a href="#">Contacto</a></li>
                               </ul>
                            </div>
                         </div>
                         <div class="col-md-6">
                            <div class="widget_menu">
-                              <h3>Account</h3>
+                              <h3>Cuenta</h3>
                               <ul>
-                                 <li><a href="#">Account</a></li>
+                                 <li><a href="#">Cuenta</a></li>
                                  <li><a href="#">Checkout</a></li>
                                  <li><a href="#">Login</a></li>
-                                 <li><a href="#">Register</a></li>
-                                 <li><a href="#">Shopping</a></li>
-                                 <li><a href="#">Widget</a></li>
+                                 <li><a href="#">Registro</a></li>
+                                 <li><a href="#">Compras</a></li>
+                                 <li><a href="#">Configuración</a></li>
                               </ul>
                            </div>
                         </div>
@@ -1006,16 +1024,20 @@
                   </div>
                   <div class="col-md-5">
                      <div class="widget_menu">
-                        <h3>Newsletter</h3>
+                        <h3>Información adicional</h3>
                         <div class="information_f">
-                           <p>Subscribe by our newsletter and get update protidin.</p>
+                           <p>Suscribete para obtenr mas información</p>
                         </div>
                         <div class="form_sub">
-                           <form>
+                           <form id="formEmail">
                               <fieldset>
                                  <div class="field">
-                                    <input type="email" placeholder="Enter Your Mail" name="email" />
-                                    <input type="submit" value="Subscribe" />
+                                    <input type="email" placeholder="Ingresar email" name="email" />
+                                    <input onclick="mostrarNotificacion()" id="button" type="submit" value="Suscribirse"/>
+                                    <div class="notificacion success">
+                                       <span class="cerrar" onclick="cerrarNotificacion()">&times;</span>
+                                       <p>¡Gracias por suscribirte! Se ha enviado mas información a su email</p>
+                                    </div>
                                  </div>
                               </fieldset>
                            </form>
@@ -1029,11 +1051,7 @@
    </footer>
    <!-- footer end -->
    <div class="cpy_">
-      <p class="mx-auto">© 2021 All Rights Reserved By <a href="https://html.design/">Free Html Templates</a><br>
-
-         Distributed By <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>
-
-      </p>
+      <p class="mx-auto">Copyright 2023; Designed by Brayan Garcia<br></p>
    </div>
    <!-- jQery -->
    <script src="js/jquery-3.4.1.min.js"></script>
@@ -1043,6 +1061,15 @@
    <script src="js/bootstrap.js"></script>
    <!-- custom js -->
    <script src="js/custom.js"></script>
+
+   <script src="js/email.js"></script>
+
+   <script type="text/javascript"
+   src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+   <script type="text/javascript">
+    emailjs.init('08ejgiQI1sqDjepGt')
+</script>
 </body>
 
 </html>
