@@ -126,20 +126,23 @@
                               <h2>Brayan Garcia</h2>
                            </div>
                            <hr>
-
-                           <a href="#" class="sub-menu-link">
+                           <a class="sub-menu-link" href="#" >
                               <img src="images/iconos/profile.png">
-                              <p>Login</p>
+                              <p>Login/Registro</p>
                               <span>></span>
                            </a>
-
+                           <a class="sub-menu-link" href="#" >
+                              <img src="images/iconos/setting.png">
+                              <p>Configuración</p>
+                              <span>></span>
+                           </a>
+                           <a class="sub-menu-link" href="#" >
+                              <img src="images/iconos/logout.png">
+                              <p>Salir</p>
+                              <span>></span>
+                           </a>
                         </div>
                      </div>
-                     <!-- <form class="form-inline">
-                        <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
-                           <i class="fa-regular fa-user"></i>
-                        </button>
-                     </form> -->
                   </ul>
                </div>
             </nav>
@@ -861,13 +864,21 @@
                <div class="col-md-6 offset-md-3">
                   <div class="subscribe_form ">
                      <div class="heading_container heading_center">
-                        <h3>Subscribe To Get Discount Offers</h3>
+                        <h3>Suscribirse para saber mas de nuestras ofertas</h3>
                      </div>
                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-                     <form action="">
+                     <form action="formEmail">
                         <input type="email" placeholder="Enter your email">
-                        <button>
+                        <button onclick="mostrarNotificacion()">
                            subscribe
+                           <div class="notificacion success">
+                              <span class="cerrar" onclick="cerrarNotificacion()">&times;</span>
+                              <p>¡Gracias por suscribirte! Se ha enviado mas información a su email</p>
+                           </div>
+                           <div class="notificacionAdvertencia warning">
+                              <span class="cerrar" onclick="cerrarNotificacion()">&times;</span>
+                              <p>Por favor ingresar un email!</p>
+                           </div>
                         </button>
                      </form>
                   </div>
@@ -892,16 +903,16 @@
                      <div class="img_container">
                         <div class="img-box">
                            <div class="img_box-inner">
-                              <img src="images/client.jpg" alt="">
+                              <img src="images/profile/profile.jpg" alt="">
                            </div>
                         </div>
                      </div>
                      <div class="detail-box">
                         <h5>
-                           Anna Trevor
+                           Brayan Garcia
                         </h5>
                         <h6>
-                           Customer
+                           Invitado
                         </h6>
                         <p>
                            Dignissimos reprehenderit repellendus nobis error quibusdam? Atque animi sint unde quis
@@ -916,16 +927,16 @@
                      <div class="img_container">
                         <div class="img-box">
                            <div class="img_box-inner">
-                              <img src="images/client.jpg" alt="">
+                              <img src="images/profile/profile.jpg" alt="">
                            </div>
                         </div>
                      </div>
                      <div class="detail-box">
                         <h5>
-                           Anna Trevor
+                           Brayan Garcia
                         </h5>
                         <h6>
-                           Customer
+                           Invitado
                         </h6>
                         <p>
                            Dignissimos reprehenderit repellendus nobis error quibusdam? Atque animi sint unde quis
@@ -940,16 +951,16 @@
                      <div class="img_container">
                         <div class="img-box">
                            <div class="img_box-inner">
-                              <img src="images/client.jpg" alt="">
+                              <img src="images/profile/profile.jpg" alt="">
                            </div>
                         </div>
                      </div>
                      <div class="detail-box">
                         <h5>
-                           Anna Trevor
+                           Brayan Garcia
                         </h5>
                         <h6>
-                           Customer
+                           Invitado
                         </h6>
                         <p>
                            Dignissimos reprehenderit repellendus nobis error quibusdam? Atque animi sint unde quis
@@ -1026,17 +1037,21 @@
                      <div class="widget_menu">
                         <h3>Información adicional</h3>
                         <div class="information_f">
-                           <p>Suscribete para obtenr mas información</p>
+                           <p>Suscribete para obtener mas información</p>
                         </div>
                         <div class="form_sub">
                            <form id="formEmail">
                               <fieldset>
                                  <div class="field">
-                                    <input type="email" placeholder="Ingresar email" name="email" />
-                                    <input onclick="mostrarNotificacion()" id="button" type="submit" value="Suscribirse"/>
+                                    <input type="email" placeholder="Ingresar email" id="email" name="email" />
+                                    <input onclick="formularioValidation()" id="button" type="submit" value="Suscribirse"/>
                                     <div class="notificacion success">
                                        <span class="cerrar" onclick="cerrarNotificacion()">&times;</span>
                                        <p>¡Gracias por suscribirte! Se ha enviado mas información a su email</p>
+                                    </div>
+                                    <div class="notificacionAdvertencia warning">
+                                       <span class="cerrar" onclick="cerrarNotificacion()">&times;</span>
+                                       <p>Por favor ingresar un email!</p>
                                     </div>
                                  </div>
                               </fieldset>
@@ -1063,6 +1078,8 @@
    <script src="js/custom.js"></script>
 
    <script src="js/email.js"></script>
+
+   <script src="js/claseJavaJS.js"></script>
 
    <script type="text/javascript"
    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>

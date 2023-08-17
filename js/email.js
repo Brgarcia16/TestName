@@ -1,42 +1,67 @@
 const btn = document.getElementById('button');
 
-document.getElementById('formEmail')
- .addEventListener('submit', function(event) {
-   event.preventDefault();
 
-   btn.value = 'Enviando...';
+function formularioValidation() {
+  document.getElementById('formEmail')
+    .addEventListener('submit', function (event) {
+      event.preventDefault();
 
-   const serviceID = 'default_service';
-   const templateID = 'template_mr5nasq';
+      var emailInput = document.getElementById("email");
+      var emailValue = emailInput.value;
 
-   emailjs.sendForm(serviceID, templateID, this)
-    .then(() => {
-      btn.value = 'Volver a intentar';
-      alert('Email enviado correctamente!');
-    }, (err) => {
-      btn.value = 'Voler a intentar';
-      alert(JSON.stringify(err));
+      if (emailValue == '') {
+        mensajeAdvertencia();
+      } else {
+        btn.value = 'Enviando...';
+
+        const serviceID = 'default_service';
+        const templateID = 'template_mr5nasq';
+
+        emailjs.sendForm(serviceID, templateID, this)
+          .then(() => {
+            btn.value = 'Volver a intentar';
+          }, (err) => {
+            btn.value = 'Voler a intentar';
+        });
+        mostrarNotificacion();
+      }
     });
-});
+    
+}
+
 
 
 
 function mostrarNotificacion() {
-    var notificacion = document.querySelector('.notificacion.success');
-    notificacion.classList.add('mostrar');
-  
-    setTimeout(function () {
-      cerrarNotificacion();
-    }, 2000); // Cerrar la notificación automáticamente después de 5 segundos
-  }
-  
-  function cerrarNotificacion() {
-    var notificacion = document.querySelector('.notificacion.success');
-    notificacion.classList.remove('mostrar');
-  }
+  var notificacion = document.querySelector('.notificacion.success');
+  notificacion.classList.add('mostrar');
+  timeOutMessage();
+}
 
 
-  let subMenu = document.getElementById("subMenu");
-  function toggleMenu(){
-    subMenu.classList.toggle("open-menu")
-  }
+function mensajeAdvertencia() {
+  var notificacion = document.querySelector('.notificacionAdvertencia.warning')
+  notificacion.classList.add('mostrar');
+  timeOutMessage();
+  formularioValidation();
+}
+
+
+function cerrarNotificacion() {
+  var notificacion = document.querySelector('.notificacion.success');
+  var notificacion = document.querySelector('.notificacionAdvertencia.warning');
+  notificacion.classList.remove('mostrar');
+}
+
+function timeOutMessage() {
+  setTimeout(function () {
+    cerrarNotificacion();
+  }, 2000);
+}
+
+
+
+let subMenu = document.getElementById("subMenu");
+function toggleMenu() {
+  subMenu.classList.toggle("open-menu")
+}
