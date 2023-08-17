@@ -22,11 +22,11 @@ function formularioValidation() {
             btn.value = 'Volver a intentar';
           }, (err) => {
             btn.value = 'Voler a intentar';
-        });
+          });
         mostrarNotificacion();
       }
     });
-    
+
 }
 
 
@@ -59,9 +59,13 @@ function timeOutMessage() {
   }, 2000);
 }
 
-
+let cart = document.getElementById("menuCart");
+function toggleCart(){
+  cart.classList.toggle("open-cart");
+}
 
 let subMenu = document.getElementById("subMenu");
 function toggleMenu() {
-  subMenu.classList.toggle("open-menu")
+  subMenu.classList.toggle("open-menu");
 }
+

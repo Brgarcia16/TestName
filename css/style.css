@@ -287,7 +287,7 @@ a:focus {
   z-index: 1;
 }
 
-.sub-menu {
+.sub-menu{
   background-color: white;
   padding: 20px;
   margin: 10px;
@@ -312,7 +312,7 @@ a:focus {
   margin-right: 15px;
 }
 
-.sub-menu hr {
+.sub-menu hr, .cartLine hr{
   border: 0;
   height: 1px;
   width: 100%;
@@ -351,9 +351,33 @@ a:focus {
   transform: translate(5px);
 }
 
-.sub-menu-link:hover p {
+.sub-menu-link:hover p, .menu_cart:hover p{
   font-weight: 600;
 }
+
+
+/* Carrito */
+.sub-menu-cart{
+  position: absolute;
+  top: 108%;
+  width: 200px;
+  height: 200px;
+  right: 0;
+  background-color: white;
+  overflow: hidden;
+  transition: max-height 0.5s;
+  z-index: 1;
+}
+.sub-menu-cart.open-cart{
+  max-height: 400px;
+  display: none;
+}
+
+.menu_cart p {
+  text-align: center;
+  text-decoration: none;
+}
+
 
 
 /*end header section*/
