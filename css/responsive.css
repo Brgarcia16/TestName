@@ -29,6 +29,9 @@
   .client_section .carousel-control-next {
     right: 15%;
   }
+  .user-pic, .subMenu{
+    display: none;
+  }
 
 }
 
@@ -66,10 +69,29 @@
     padding: 75px 25px;
   }
 
+  
+
   .subscribe_section .subscribe_form form button {
     margin-top: 15px;
   }
+
+  .user-pic, .subMenu{
+    display: none;
+  }
+
 }
+
+@media (max-width: 1199px) {
+   #iframeContainer{
+    display: none;
+   }
+
+   #containerUbicacion{
+     display: none;
+   }
+}
+
+
 
 @media (max-width: 576px) {
   .heading_container h2 {
@@ -107,4 +129,5 @@
   .container {
     max-width: 1170px;
   }
+  
 }

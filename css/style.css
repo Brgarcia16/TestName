@@ -358,6 +358,7 @@ a:focus {
 
 /* Carrito */
 .sub-menu-cart{
+  display: none;
   position: absolute;
   top: 108%;
   width: 200px;
@@ -1307,4 +1308,76 @@ form input[type="submit"]:focus {
   color: #f7444e;
   font-size: 15px;
   font-weight: 400;
+}
+.agenda {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.add-event {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.events {
+  display: flex;
+  flex-direction: column;
+}
+
+.event {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.event h2 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.event p {
+  margin: 0;
+}
+
+.event .delete {
+  color: #ff0000;
+  cursor: pointer;
+}
+
+.event-form {
+  margin: 20px 0;
+}
+
+#event-input {
+  padding: 8px;
+  width: 70%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#add-event-btn {
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
