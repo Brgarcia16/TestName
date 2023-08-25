@@ -1076,7 +1076,8 @@ a:focus {
   width: 263px;
 }
 
-#mensajeSuccess, #mensajeUser{
+#mensajeSuccess,
+#mensajeUser {
   top: 6px;
   position: relative;
   text-align: center;
@@ -1412,7 +1413,7 @@ form input[type="submit"]:focus {
   background-size: cover;
   display: flex;
   justify-content: center;
-  max-width: 100%; 
+  max-width: 100%;
 }
 
 .recuperarPass {
@@ -1429,7 +1430,7 @@ form input[type="submit"]:focus {
 
 .formLogin {
   width: 700px;
-  height: 500px;
+  height: 600px;
   background-color: hsla(210, 64%, 14%, 0.699);
   border-radius: 10%;
   position: relative;
@@ -1454,10 +1455,11 @@ form input[type="submit"]:focus {
   content: "";
   position: absolute;
   width: 695px;
-  height: 495px;
-  background-color:hsl(202, 85%, 3%);
+  height: 595px;
+  background-color: hsl(202, 85%, 3%);
   border-radius: 10%;
-  box-shadow: inset 16px 14px 20px #0a08088c;;
+  box-shadow: inset 16px 14px 20px #0a08088c;
+  ;
 }
 
 @keyframes rotar {
@@ -1486,6 +1488,22 @@ form input[type="submit"]:focus {
   align-items: center;
   width: 400px;
   height: 400px;
+}
+
+.user__data_register {
+  z-index: 10;
+  background-color: transparent;
+  position: relative;
+  top: 8px;
+  width: 389px;
+}
+
+#icon_confirm_pass,
+#icon_email {
+  position: absolute;
+  top: 41px;
+  left: 139px;
+  left: 10px;
 }
 
 .user__data,
@@ -1529,4 +1547,24 @@ form input[type="submit"]:focus {
   position: relative;
   top: 20px;
   color: white;
+}
+
+
+.cuentaExistente {
+  position: relative;
+  top: 58px;
+  left: 107px;
+}
+
+.botonRegistrar {
+  width: 200px;
+  height: 31px;
+  background: rgba(7, 45, 77, 0.4039215686);
+  border: none;
+  color: white;
+  align-items: center;
+  position: relative;
+  top: 51px;
+  text-align: center;
+  left: 93px;
 }
