@@ -46,7 +46,6 @@ function mensajeAdvertencia() {
   formularioValidation();
 }
 
-
 function cerrarNotificacion() {
   var notificacion = document.querySelector('.notificacion.success');
   var notificacion = document.querySelector('.notificacionAdvertencia.warning');
