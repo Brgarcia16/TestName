@@ -27,7 +27,7 @@
     <main>
         <div class="container__data">
             <section>
-                <form action="./login.html" class="formLogin">
+                <form action="" class="formLogin" id="idFormRegistro">
                     <h1>REGISTRARSE</h1>
                     <div class="user__data_register">
                         <div class="controls">
@@ -37,6 +37,7 @@
                         </div>
                         <div class="controls">
                             <i class="fa-solid fa-lock" id="icon_pass"></i>
+                            <i class="fa-solid fa-eye-slash" id="icon_pass_slash" onclick="mostrarPass()"></i>
                             <label for="password"></label>
                             <input type="password" name="password" id="password" placeholder="PASSWORD">
                         </div>
@@ -58,7 +59,17 @@
                             <label for="Recordar">RECORDAR DATOS</label>
                         </div>
                         <div>
-                            <button class="botonRegistrar" type="submit">REGISTRAR</button>
+                            <button onclick="registroUsuario()" class="botonRegistrar" type="submit">
+                                REGISTRAR
+                                <div class="notificacion success">
+                                    <span class="cerrar" onclick="cerrarNotificacion()">&times;</span>
+                                    <p id="mensajeSuccess"></p>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="notificacionAdvertencia warning">
+                            <span class="cerrar" onclick="cerrarNotificacion()">&times;</span>
+                            <p id="mensajeUser"></p>
                         </div>
                         <div class="cuentaExistente">
                             <a href="../pages/login.html">¿Ya tienes tu cuenta?</a>
@@ -69,7 +80,8 @@
         </div>
     </main>
 
-
+    <script src="../js/alamacenamientoLocal/login.js"></script>
+    <script src="../js/alamacenamientoLocal/registro.js"></script>
 
 </body>
 
