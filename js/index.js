@@ -1,3 +1,11 @@
+var currentURL = window.location.href;
+
+if (currentURL.includes("../index.html")) {
+    alert('¡Bienvendio a mi pagina web!');
+    alert('Para esta primera entrega realice mi foco en el login, asi que para acceder. Sigue los pasos...');
+    alert('Click en foto de perfil --> Click en login/register');
+}
+
 const btn = document.getElementById('button');
 
 
@@ -67,4 +75,6 @@ let subMenu = document.getElementById("subMenu");
 function toggleMenu() {
   subMenu.classList.toggle("open-menu");
 }
+
+
 

@@ -1,8 +1,3 @@
-
-alert("Bienvendio a mi pagina web");
-alert("Para esta primera entrega realice mi foco en el login, asi que para acceder. Sigue los pasos...")
-alert("Click en foto de perfil --> Click en login/register")
-
 const mensajeAdevertencia = document.getElementById('mensajeUser');
 const mensajeSuccess = document.getElementById('mensajeSuccess');
 
