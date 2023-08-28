@@ -1,3 +1,20 @@
+var currentURL = window.location.href;
+
+if (currentURL.includes("login.html")) {
+    mostrarMensajeUsuario();
+}
+
+function mostrarMensajeUsuario(){
+    alert('¡Bienvendio a al login!');
+    var resultado = window.confirm("¿Tienes tu cuenta?");
+    if(!resultado){
+        alert('Para realizar el registro de tu cuenta. Por favor hacer click en Registrarte');
+    }else {
+        alert('Por favor ingresar sus datos. ')
+    }
+
+}
+
 const mensajeAdevertencia = document.getElementById('mensajeUser');
 const mensajeSuccess = document.getElementById('mensajeSuccess');
 

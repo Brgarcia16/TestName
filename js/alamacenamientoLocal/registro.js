@@ -47,3 +47,13 @@ function guardarDatosUsuario(datos){
 }
 
 
+var currentURL = window.location.href;
+
+if (currentURL.includes("registro.html")) {
+    alert('¡Bienvendio al Registro!');
+    alert('Ingresa tu nombre de usuario!!');
+    alert('Ingresa una contraseña segura');
+    alert('Luego ingresa la misma contraseña. Asegurate que sean iguales!!');
+    alert('Por ultimo ingresa un mail valido!!');
+    alert('Antes de confirmar, puedes comprobar las validaciones de los campos. Adelante!!');
+}
